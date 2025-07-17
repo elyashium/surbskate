@@ -20,8 +20,12 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      
+      <div className="text-red-500">
       <PrismicRichText field={slice.primary.heading} />
+
+      </div>
+      
+      
       <PrismicRichText field={slice.primary.body} />
       <PrismicNextLink field={slice.primary.button} />
     </Bounded>

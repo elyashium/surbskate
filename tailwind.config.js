@@ -1,16 +1,13 @@
 /** @type {import('tailwindcss').Config} */
-import fluid, { extract } from 'fluid-tailwind'
-module.exports = {
+const fluid = require('fluid-tailwind');
 
-  content:{ 
-    files: [
+module.exports = {
+  content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/slices/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  extract,
-},
   theme: {
     extend: {
       fontFamily: {
