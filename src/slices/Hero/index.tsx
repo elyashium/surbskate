@@ -15,6 +15,7 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  */
 const Hero: FC<HeroProps> = ({ slice }) => {
   return (
+    
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}

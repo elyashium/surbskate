@@ -14,8 +14,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-bowlby-one-sc)"],
-        mono: ["var(--font-dm-mono)"],
+        sans: ['var(--font-bowlby-one-sc)'],
+        mono: ['var(--font-dm-mono)'],
       },
     },
   },
