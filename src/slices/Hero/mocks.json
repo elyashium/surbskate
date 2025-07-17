@@ -2,7 +2,39 @@
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
-		"primary": {},
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Deeply"
+						}
+					}
+				]
+			},
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Est sint irure eu ex minim laboris esse in cillum. Nulla deserunt dolor aliquip nostrud exercitation quis dolore officia amet minim mollit et ut mollit. Qui pariatur aute aliqua veniam enim magna officia est aute."
+						}
+					}
+				]
+			},
+			"button": {
+				"__TYPE__": "LinkContent",
+				"key": "ab71b1a8-f583-406b-b0c6-94b40ae953ba",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "previous"
+				}
+			}
+		},
 		"items": []
 	}
 ]
