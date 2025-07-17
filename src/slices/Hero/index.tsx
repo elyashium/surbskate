@@ -17,9 +17,6 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for hero (variation: {slice.variation}) slices.
-      <br />
-      <strong>You can edit this slice directly in your code editor.</strong>
       
       <PrismicRichText field={slice.primary.heading} />
       <PrismicRichText field={slice.primary.body} />
