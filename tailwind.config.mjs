@@ -7,7 +7,7 @@ import fluid, {
   FluidThemeConfig,
 } from "fluid-tailwind";
 
-module.exports = {
+export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,6 +15,9 @@ module.exports = {
     "./src/slices/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fluid: (({ theme }) => ({
+      defaultScreens: ["20rem", theme("screens.lg")],
+    })),
     screens,
     fontSize,
     extend: {
