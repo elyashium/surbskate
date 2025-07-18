@@ -22,9 +22,15 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="bg-brand-pink relative overflow-hidden h-dvh text-zinc-800 bg-texture"
     >
-      <Heading>
-      <PrismicText field={slice.primary.heading} />  
+
+      <div className="grid">
+      <Heading size="lg" className ="realtive max-w-2xl place-self-start">
+
+      <PrismicText field={slice.primary.heading} /> 
+
       </Heading>
+      </div>
+
       <PrismicRichText field={slice.primary.body} />
       <PrismicNextLink field={slice.primary.button} />
     </Bounded>
