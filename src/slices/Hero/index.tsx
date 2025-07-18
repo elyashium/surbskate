@@ -5,6 +5,7 @@ import { PrismicNextLink } from "@prismicio/next";
 
 import { Bounded } from "@/components/Bounded";
 import { Heading } from "@/components/Heading";
+import { ButtonLink } from "@/components/ButtonLink";
 
 /**
  * Props for `Hero`.
@@ -31,14 +32,22 @@ const Hero: FC<HeroProps> = ({ slice }) => {
         <Heading className="relative max-w-2xl place-self-start">
           <PrismicText field={slice.primary.heading} />
         </Heading>
-        
+
         <div className="flex relative w-full flex-col items-center justify-between ~gap-2/4 lg:flex-row">
           <div className="max-w-[45ch] font-semibold ~text-lg/xl">
             <PrismicRichText field={slice.primary.body} />
           </div>
-        <PrismicNextLink field={slice.primary.button} />
 
-      </div>
+
+          <ButtonLink field={slice.primary.button}
+            className="z-20 mt-2 block"
+            icon="skateboard"
+            size="lg" >
+            {slice.primary.button.text}
+          </ButtonLink>
+
+
+        </div>
       </div>
 
 
