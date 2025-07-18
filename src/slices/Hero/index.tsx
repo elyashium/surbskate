@@ -16,7 +16,7 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  */
 const Hero: FC<HeroProps> = ({ slice }) => {
   return (
-    
+
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
@@ -25,16 +25,20 @@ const Hero: FC<HeroProps> = ({ slice }) => {
 
       <div className="grid absolute inset-0 mx-auto mt-24 max-w-4xl grid-rows-[1fr,auto] place-items-end px-6 ~py-10/16">
 
-      <Heading size="lg" className ="realtive max-w-2xl place-self-start">
+        <Heading size="lg" className="realtive max-w-2xl place-self-start">
 
-      <PrismicText field={slice.primary.heading} /> 
+          <PrismicText field={slice.primary.heading} />
 
-      </Heading>
+        </Heading>
       </div>
 
       <div className="flex relative w-full flex-col items-center justify-between ~gap-2/4 lg:flex-row">
-      <PrismicRichText field={slice.primary.body} />
-      <PrismicNextLink field={slice.primary.button} />
+
+        <div className="max-w-[45ch] font-semibold ~text-lg/xl">
+          <PrismicRichText field={slice.primary.body} />
+        </div>
+
+        <PrismicNextLink field={slice.primary.button} />
 
       </div>
 
