@@ -23,7 +23,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       className="bg-brand-pink relative overflow-hidden h-dvh text-zinc-800 bg-texture"
     >
 
-      <div className="grid">
+      <div className="grid absolute inset-0 mx-auto mt-24 max-w-4xl grid-rows-2 place-items-end px-6 ~py-10/16">
       <Heading size="lg" className ="realtive max-w-2xl place-self-start">
 
       <PrismicText field={slice.primary.heading} /> 
