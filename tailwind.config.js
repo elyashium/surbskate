@@ -1,5 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-const fluid = require('fluid-tailwind');
+
+import fluid, {
+  extract,
+  screens,
+  fontSize,
+  FluidThemeConfig,
+} from "fluid-tailwind";
 
 module.exports = {
   content: [
@@ -9,6 +15,8 @@ module.exports = {
     "./src/slices/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens,
+    fontSize,
     extend: {
       fontFamily: {
         sans: ['var(--font-bowlby-one-sc)'],
