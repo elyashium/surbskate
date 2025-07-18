@@ -19,6 +19,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="bg-brand-pink relative overflow-hidden h-dvh text-zinc-800 bg-texture"
     >
       
       <PrismicRichText field={slice.primary.heading} />  
