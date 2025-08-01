@@ -1,5 +1,5 @@
 import { createClient } from '@/prismicio'
-import { Content } from '@prismicio/client';
+import { Content, isFilled } from '@prismicio/client';
 import { PrismicNextImage } from '@prismicio/next';
 import React from 'react'
 
@@ -7,15 +7,17 @@ type Props = {
     id: string
 }
 
-export async function SkateboardProduct({id}: Props) {
+export async function SkateboardProduct({ id }: Props) {
 
     const client = createClient();
     const product = await client.getByID<Content.SkateboardsDocument>(id);
 
-  return (
-    <div>
+    const price = isFilled.number(product.data.price) ? `₹${(product.data.price)}` : "price not found"
 
-        <PrismicNextImage alt='' field={product.data.image} width={150} />
-    </div>
-  )
+    return (
+        <div>
+
+            <PrismicNextImage alt='' field={product.data.image} width={150} />
+        </div>
+    )
 }
