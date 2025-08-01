@@ -6,7 +6,7 @@ type Props = {}
 
 export function Header({ }: Props) {
     return (
-        <header>
+        <header className='header absolute top-0 left-0 right-0 z-50 ~h-32/48 ~px-4/6 ~py-4/6 hd:h-32'>
             <div className="flex">
                 <Link href="/">Logo</Link>
 
