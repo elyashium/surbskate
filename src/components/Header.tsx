@@ -3,6 +3,7 @@ import React from 'react'
 import { ButtonLink } from './ButtonLink'
 import { Logo } from './Logo'
 import { createClient } from '@/prismicio'
+import { PrismicNextLink } from '@prismicio/next'
 
 export async function Header() {
 
@@ -18,11 +19,14 @@ export async function Header() {
                 </Link>
                 <nav aria-label='Main' className='col-span-full row-start-2 md:col-span-1 md:col-start-2 md:row-start-1'>
                     <ul className='flex flex-wrap gap-8 items-centre justify-center'>
-                        <li>boards</li>
-                        <li>boards</li>
-                        <li>boards</li>
-                        <li>boards</li>
-                        <li>boards</li>
+                        {settings.data.navigation.map((item) =>(
+                            <li key={item.link.text}>
+
+                                <PrismicNextLink field={item.link} className='~text-lg/xl'/>
+                            </li>
+
+                        ))}
+                       
                     </ul>
                 </nav>
 
